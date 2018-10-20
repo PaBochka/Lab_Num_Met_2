@@ -17,30 +17,20 @@
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>180</y>
-      <width>341</width>
-      <height>281</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QWidget" name="widget_2" native="true">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>180</y>
-      <width>341</width>
-      <height>281</height>
+      <x>390</x>
+      <y>30</y>
+      <width>741</width>
+      <height>581</height>
      </rect>
     </property>
    </widget>
    <widget class="QProgressBar" name="progressBar">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>470</y>
-      <width>281</width>
-      <height>23</height>
+      <x>10</x>
+      <y>382</y>
+      <width>321</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="value">
@@ -136,8 +126,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="textEdit_6">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>280</y>
+      <x>140</x>
+      <y>80</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -153,8 +143,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="textEdit_7">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>330</y>
+      <x>140</x>
+      <y>130</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -170,8 +160,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="textEdit_8">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>30</y>
+      <x>270</x>
+      <y>80</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -187,8 +177,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="textEdit_9">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>80</y>
+      <x>270</x>
+      <y>130</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -198,14 +188,14 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;50&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;5&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="textEdit_10">
     <property name="geometry">
      <rect>
       <x>140</x>
-      <y>130</y>
+      <y>30</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -221,8 +211,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="textEdit_11">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>180</y>
+      <x>270</x>
+      <y>30</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -232,7 +222,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;10&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;0.01&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -245,7 +235,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="text">
-     <string>p</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'arial,sans-serif'; font-size:16px; color:#222222; background-color:#ffffff;&quot;&gt;ρ&lt;/span&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -258,7 +248,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="text">
-     <string>v</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'arial,sans-serif'; font-size:16px; color:#222222; background-color:#ffffff;&quot;&gt;ν&lt;/span&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -271,7 +261,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="text">
-     <string>y</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'palatino linotype,new athena unicode,athena,gentium,code2000,serif'; font-weight:600; color:#222222; background-color:#ffffff;&quot;&gt;γ&lt;/span&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -303,30 +293,17 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>260</y>
+      <x>140</x>
+      <y>60</y>
       <width>67</width>
       <height>17</height>
      </rect>
     </property>
     <property name="text">
-     <string>u10</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;u&lt;span style=&quot; vertical-align:super;&quot;&gt;(1)&lt;/span&gt;&lt;span style=&quot; vertical-align:sub;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>310</y>
-      <width>67</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>u20</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
       <x>140</x>
@@ -336,14 +313,27 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="text">
-     <string>x0</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;u&lt;span style=&quot; vertical-align:super;&quot;&gt;(2)&lt;/span&gt;&lt;span style=&quot; vertical-align:sub;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;x&lt;span style=&quot; vertical-align:sub;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>10</y>
+      <x>270</x>
+      <y>60</y>
       <width>67</width>
       <height>17</height>
      </rect>
@@ -355,8 +345,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>60</y>
+      <x>270</x>
+      <y>110</y>
       <width>67</width>
       <height>17</height>
      </rect>
@@ -368,8 +358,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>160</y>
+      <x>270</x>
+      <y>10</y>
       <width>67</width>
       <height>17</height>
      </rect>
@@ -382,7 +372,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>140</x>
-      <y>230</y>
+      <y>180</y>
       <width>121</width>
       <height>23</height>
      </rect>
@@ -395,13 +385,26 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>370</y>
-      <width>89</width>
-      <height>71</height>
+      <y>290</y>
+      <width>241</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>Solve</string>
+     <string>Build</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_2">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>220</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Очищать график</string>
     </property>
    </widget>
   </widget>

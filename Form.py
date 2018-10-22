@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
         self.widget.setGeometry(QtCore.QRect(390, 30, 741, 581))
         self.widget.setObjectName("widget")
         self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
-        self.progressBar.setGeometry(QtCore.QRect(10, 382, 321, 31))
+        self.progressBar.setGeometry(QtCore.QRect(10, 382, 331, 31))
         self.progressBar.setProperty("value", 0)
         self.progressBar.setObjectName("progressBar")
         self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
@@ -96,6 +96,9 @@ class Ui_MainWindow(object):
         self.checkBox_2 = QtWidgets.QCheckBox(self.centralwidget)
         self.checkBox_2.setGeometry(QtCore.QRect(140, 220, 141, 21))
         self.checkBox_2.setObjectName("checkBox_2")
+        self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
+        self.textBrowser.setGeometry(QtCore.QRect(10, 420, 331, 192))
+        self.textBrowser.setObjectName("textBrowser")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1280, 22))
@@ -178,7 +181,15 @@ class Ui_MainWindow(object):
         self.label_9.setText(_translate("MainWindow", "eps"))
         self.label_10.setText(_translate("MainWindow", "d"))
         self.label_11.setText(_translate("MainWindow", "step"))
-        self.checkBox.setText(_translate("MainWindow", "Контроль ЛП"))
+        self.checkBox.setText(_translate("MainWindow", "Handle LE"))
         self.pushButton.setText(_translate("MainWindow", "Build"))
-        self.checkBox_2.setText(_translate("MainWindow", "Очищать график"))
+        self.checkBox_2.setText(_translate("MainWindow", "Clear pic"))
+        self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'Ubuntu\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Система дифференциальных уравнений описывает модель каталитической реакции, в которой участвуют два субстрата: активатор и ингибитор, второй подавляет скорость образования первого:</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">du<span style=\" vertical-align:super;\">(1)</span>/ dt = ρ + k [u <span style=\" vertical-align:super;\">(1)</span> ]<span style=\" vertical-align:super;\"> 2</span> [u<span style=\" vertical-align:super;\">(2)</span> ]<span style=\" vertical-align:super;\">-1 </span>– γ u<span style=\" vertical-align:super;\">(1)</span>,</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">du<span style=\" vertical-align:super;\">(2)</span>/ dt = c [ u<span style=\" vertical-align:super;\"> (1)</span> ]<span style=\" vertical-align:super;\"> 2</span> – ν u<span style=\" vertical-align:super;\">(2)</span> .</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Здесь t – время, u<span style=\" vertical-align:super;\">(1)</span>(t) - концентрация активатора, u<span style=\" vertical-align:super;\"> (2)</span> (t) - концентрация ингибитора в системе. Слагаемое ρ описывает плотность активатора, слагаемое k [u<span style=\" vertical-align:super;\"> (1)</span>]<span style=\" vertical-align:super;\">2</span> [u<span style=\" vertical-align:super;\">(2)</span>]<span style=\" vertical-align:super;\">-1</span> – скорость самообразования активатора, которая подавляется присутствующим ингибитором, слагаемое c[u<span style=\" vertical-align:super;\"> (1)</span>]<span style=\" vertical-align:super;\">2</span>  описывает скорость образования ингибитора вследствие наличия активатора. Слагаемые [– νu<span style=\" vertical-align:super;\">(1)</span>] и [ - γu<span style=\" vertical-align:super;\">(2)</span>] описывают естественный распад реагентов: активатора и ингибитора соответственно. Пространственные взаимодействия (диффузия) в данной модели не учитываются. Параметры системы: ρ, k, γ, ν, с – постоянные неотрицательные величины.</p></body></html>"))
 

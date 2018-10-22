@@ -62,9 +62,9 @@ class mathpart(Ui_MainWindow):
             s1 = h * (2 * K[0][0] - 9 * K[2][0] + 8 * K[3][0] - K[4][0]) / 30
             s2 = h * (2 * K[0][1] - 9 * K[2][1] + 8 * K[3][1] - K[4][1]) / 30
             
-            if self.checkBox.isChecked():
-                secwin.tableWidget.setItem(number_r, 4, QtWidgets.QTableWidgetItem(str(abs(s1))))
-                secwin.tableWidget.setItem(number_r, 5, QtWidgets.QTableWidgetItem(str(abs(s2))))
+            
+            secwin.tableWidget.setItem(number_r, 4, QtWidgets.QTableWidgetItem(str(abs(s1))))
+            secwin.tableWidget.setItem(number_r, 5, QtWidgets.QTableWidgetItem(str(abs(s2))))
 
             
             u1_new = u1 + h * (K[0][0] + 4 * K[3][0] + K[4][0]) / 6
@@ -74,12 +74,11 @@ class mathpart(Ui_MainWindow):
             secwin.tableWidget.setItem(number_r, 1, QtWidgets.QTableWidgetItem(str(x_new)))
             secwin.tableWidget.setItem(number_r, 2, QtWidgets.QTableWidgetItem(str(u1_new)))
             secwin.tableWidget.setItem(number_r, 3, QtWidgets.QTableWidgetItem(str(u2_new)))
-
+            S1list.append(abs(s1))
+            S2list.append(abs(s2))
             nonlocal count_div, count_mul
             if self.checkBox.isChecked():
                 if abs(s1) >= eps/16 and abs(s2) >= eps/16 and abs(s1) <= eps and abs(s2) <= eps:
-                    S1list.append(abs(s1))
-                    S2list.append(abs(s2))
                     return x_new, u1_new, u2_new
                 elif abs(s1) > eps or abs(s2) > eps:
                     count_div += 1
@@ -88,20 +87,16 @@ class mathpart(Ui_MainWindow):
                 elif abs(s1) < eps/16 and abs(s2) < eps/16:
                     count_mul += 1
                     h *= 2
-                    S1list.append(abs(s1))
-                    S2list.append(abs(s2))
                     return x_new, u1_new, u2_new
                 else: 
-                    S1list.append(abs(s1))
-                    S2list.append(abs(s2))
                     return x_new, u1_new, u2_new
                     
             else: 
                 
                 return x_new, u1_new, u2_new
-
+        
         self.progressBar.setMinimum(x0)
-        self.progressBar.setMaximum(100)
+        self.progressBar.setMaximum(d)
         ax_1 = self.figure.add_subplot(211)
         ax_2 = self.figure.add_subplot(212)
         if self.checkBox_2.isChecked():
@@ -122,40 +117,43 @@ class mathpart(Ui_MainWindow):
         secwin.label_8.setText("Естественный распад ингибитора y = " + str(y))
         secwin.label_9.setText("Контроль локальной погрешности Eps = " + str(eps))
         
-        ax_1.set_ylabel("Inhibitor")
-        ax_2.set_ylabel("Activator")
-        ax_2.set_xlabel("Concetnration")
+        ax_1.set_ylabel("Activator")
+        ax_2.set_ylabel("Inhibitor")
+        ax_2.set_xlabel("Time")
         xlist, u1list, u2list = [], [], []
         u1list.append(u10)
         u2list.append(u20)
         xlist.append(x0)
+        
         while x < d:
             x, v1, v2 = next_point(x, v1, v2, i + 1)                    
             secwin.tableWidget.setItem(i + 1, 6, QtWidgets.QTableWidgetItem(str(h)))
             secwin.tableWidget.setItem(i + 1, 7, QtWidgets.QTableWidgetItem(str(count_div)))
             secwin.tableWidget.setItem(i + 1, 8, QtWidgets.QTableWidgetItem(str(count_mul)))           
-            self.progressBar.setValue(i)
+            self.progressBar.setValue(x)
             xlist.append(x)
             u1list.append(v1)
             u2list.append(v2)
             i += 1
         if self.checkBox.isChecked():
-            ax_1.plot(xlist, u1list, '-b', label = 'С контролем ЛП')
+            line1, = ax_2.plot(xlist, u1list, '-b', label = 'C Контролем ЛП')
         else:
-            ax_1.plot(xlist, u1list, '-y')
+            ax_2.plot(xlist, u1list, '-y')
         if self.checkBox.isChecked():
-            ax_2.plot(xlist, u2list, '-r', label = 'С контролем ЛП')
+            line2, = ax_1.plot(xlist, u2list, '-r', label = 'C Контролем ЛП')
         else:
-            ax_2.plot(xlist, u2list, '-y')
+            ax_1.plot(xlist, u2list, '-y')
+        
+        secwin.label_10.setText("Максимальная оценка ЛП 1 = " + str(round(max(S1list), 9)))
+        secwin.label_11.setText("Максимальная оценка ЛП 2 = " + str(round(max(S2list), 15)))
         if self.checkBox.isChecked():
-            secwin.label_10.setText("Максимальная оценка ЛП 1 = " + str(round(max(S1list), 9)))
-            secwin.label_11.setText("Максимальная оценка ЛП 2 = " + str(round(max(S2list), 9)))
             secwin.label_14.setText("Делений шага = " + str(count_div))
             secwin.label_15.setText("Удвоений шага = " + str(count_mul))
         secwin.label_12.setText("Максимальный шаг = " + str(max(h_list)))
         secwin.label_13.setText("Минимальный шаг = " + str(min(h_list)))
-        ax_1.legend()
-        ax_2.legend()
+        if self.checkBox.isChecked():
+            ax_1.legend(handles = [line1])
+            ax_2.legend(handles = [line2])
         ax_1.grid(True)
         ax_2.grid(True)
         self.canvas.draw()
